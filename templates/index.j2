@@ -6,8 +6,8 @@
             <div class="row">
                 <div class=" col-md-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                        <h3 class=" site-heading my-4 mt-3 text-black"> Welcome to My Blog <i class="fas fa-rocket"></i> </h3>
-                        <p class="text-dark">From <i class='fas fa-flask'></i> With <i class="fas fa-heart"></i></p>
+                        <h3 class=" site-heading my-4 mt-3 text-black"><i class="nes-logo"></i> Welcome to My Blog <i class="nes-jp-logo"></i> </h3>
+                        <h3 class="text-dark">From <i class="nes-pokeball"></i> With <i class="nes-icon is-large heart"></i></h3>
                     </div>
                 </div>
             </div>
@@ -19,11 +19,11 @@
             <div class="col-md-8 mt-3 left">
                 {% for page in pages %}
                     <div class="card mb-4">
-                        <div class="card-body">
-                            <h2 class="card-title">{{ page.title }}</h2>
+                        <div class="nes-container is-rounded card-body">
+                            <h3 class="card-title">{{ page.title }}</h2>
                             <p class="card-text text-muted h6">{{ page.author }} | {{ page.date }} </p>
                             <p class="card-text">{{ page.summary|safe }}</p>
-                            <a href="{{ url_for("page", path=page.path) }}" class="btn btn-primary">Read More &rarr;</a>
+                            <a href="{{ url_for("page", path=page.path) }}" class="nes-btn is-primary">Read More &rarr;</a>
                         </div>
                     </div>
                 {% endfor %}
